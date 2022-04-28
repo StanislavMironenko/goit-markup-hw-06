@@ -419,7 +419,8 @@ background-color: rgba(47, 48, 58, 0.8);
 
     background-color: var(--secondary-bc-);
     color: var(--white-color);
-   
+    border: transparent 0;
+    border-radius: 4px ;
     transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero .btn:hover,
@@ -518,7 +519,36 @@ color: var(--white-color);
 .social-icon:focus{
     background: var(--secondary-bc-);
 }
+.footer-form{
+    display: block;
+    margin-left: 93px;
+}
 
+.footer-input{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color:#2F303A;
+    padding: 15px 16px;
+    width: 358px;
+    color: var(--white-color);
+}
+.footer-form .title{
+    display: flex;
+}
+.footer-img{
+    display: inline-block;
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    
+}
+.footer-form .btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /* Modal */
@@ -550,12 +580,12 @@ color: var(--white-color);
     transform:translate(-50%, -50%) scale(1) ;
 
     height: 581px;
-    width: 525px;
-
+    width: 528px;
+    padding: 40px;
     background-color: var(--main-bc-);
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    overflow-y: auto;
 }    
 
 .esc{
@@ -585,9 +615,159 @@ color: var(--white-color);
     fill: var(--secondary-color-);
     background-color: var(--main-bc-);
 }
+.form{
+    position: relative;
+}
+.form-title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height:1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--header-color-);
+    margin-bottom: 12px;
+}
+.form-fild{
+    
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
 
+.form-label{
+    
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    margin-bottom: 4px;
+    color: var(--main-color-);
+}
+.form-decoration{
+    display: flex;
+    align-items: center;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input{
+    position: relative;
+    display: inline-block;
 
+    padding: 10px;
+    padding-left: 42px;
+    width: 100%;
 
+    box-sizing: border-box;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+.form-fild:focus-within .form-decoration{
+    fill: var(--secondary-color-);   
+    
+}
+.form-fild:focus-within .form-input{
+   border-color: var(--secondary-color-);
+   outline:transparent;
+}
+.form-img{
+    position: absolute;
+    transform: translate(12px, 0px);
+    width: 18px;
+    height: 18px;
+}
+
+.form-coments{
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    
+    box-sizing: border-box;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+.form-fild:focus-within .form-coments{
+    border-color: #188CE8;
+    outline:transparent;
+}
+.form-checkbox{
+    position: relative;
+    margin-bottom: 30px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.input-checkbox{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.checkbox-label{
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+}
+
+.checkbox-img{
+    margin-right: 8px;
+    box-sizing: border-box;
+    border: 3px solid var(--header-color-);
+    border-radius: 3px;    
+    width: 16px;
+    height: 15px;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-checkbox:checked + .checkbox-img{
+    border: 0px transparent;
+    background: var(--secondary-color-);
+    }
+
+.form-link{
+    position: absolute;
+    right: 0;
+    top: 2px;
+    display: inline-block;
+    margin-left: 4px;
+    color:var(--secondary-color-);
+}
+
+.form-button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-button:hover,
+.form-button:focus{
+    background-color: var(--focus-btn-bc-);
+    color: var(--white-color);
+}
 
 /* Portfolio */
 
