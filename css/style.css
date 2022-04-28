@@ -533,6 +533,7 @@ color: var(--white-color);
     padding: 15px 16px;
     width: 358px;
     color: var(--white-color);
+    cursor: pointer;
 }
 .footer-form .title{
     display: flex;
@@ -548,6 +549,13 @@ color: var(--white-color);
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.footer-form .btn:focus,
+.footer-form .btn:hover{
+    background-color: var(--focus-btn-bc-);
+    color: var(--white-color);
+
 }
 
 
